@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="15bb1c2f-08a6-479a-8c38-6697a64aa8d3" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="221" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZnMLuu4qjuX9y5TampB5jE60Pj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.32454544" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="com.ajitesh.chess.automator.AppKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="ChessAutomator.main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.ajitesh.chess.automator.AppKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.com.ajitesh.chess.automator.AppKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="15bb1c2f-08a6-479a-8c38-6697a64aa8d3" name="Default Changelist" comment="" />
+      <created>1585470351684</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585470351684</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="440" y="160" key="#Project_Structure" timestamp="1585471247655">
+      <screen x="0" y="23" width="1680" height="940" />
+    </state>
+    <state x="440" y="160" key="#Project_Structure/0.23.1680.940@0.23.1680.940" timestamp="1585471247655" />
+    <state x="673" y="433" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585513553847">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="673" y="433" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585513553847" />
+    <state x="691" y="273" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1585512884166">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="691" y="273" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585512884166" />
+    <state x="691" y="267" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.23.1680.940@0.23.1680.940" timestamp="1585506318007" />
+    <state x="396" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585557270149">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="396" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585557270149" />
+    <state x="891" y="299" key="#xdebugger.evaluate" timestamp="1585558263722">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="891" y="299" key="#xdebugger.evaluate/0.0.1680.1050@0.0.1680.1050" timestamp="1585558263722" />
+    <state x="603" y="206" key="#xdebugger.evaluate/0.23.1680.940@0.23.1680.940" timestamp="1585478766277" />
+    <state width="426" height="466" key="DebuggerActiveHint" timestamp="1585515035456">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="426" height="466" key="DebuggerActiveHint/0.0.1680.1050@0.0.1680.1050" timestamp="1585515035456" />
+    <state width="1638" height="243" key="GridCell.Tab.0.bottom" timestamp="1585582924676">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="243" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585582924676" />
+    <state width="1442" height="376" key="GridCell.Tab.0.bottom/0.23.1680.940@0.23.1680.940" timestamp="1585559682374" />
+    <state width="1638" height="243" key="GridCell.Tab.0.center" timestamp="1585582924674">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="243" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585582924674" />
+    <state width="1442" height="376" key="GridCell.Tab.0.center/0.23.1680.940@0.23.1680.940" timestamp="1585559682372" />
+    <state width="1638" height="243" key="GridCell.Tab.0.left" timestamp="1585582924673">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="243" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585582924673" />
+    <state width="1442" height="376" key="GridCell.Tab.0.left/0.23.1680.940@0.23.1680.940" timestamp="1585559682371" />
+    <state width="1638" height="243" key="GridCell.Tab.0.right" timestamp="1585582924675">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="243" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585582924675" />
+    <state width="1442" height="376" key="GridCell.Tab.0.right/0.23.1680.940@0.23.1680.940" timestamp="1585559682373" />
+    <state width="1638" height="243" key="GridCell.Tab.1.bottom" timestamp="1585582924678">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="243" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1585582924678" />
+    <state width="1442" height="376" key="GridCell.Tab.1.bottom/0.23.1680.940@0.23.1680.940" timestamp="1585559682709" />
+    <state width="1638" height="243" key="GridCell.Tab.1.center" timestamp="1585582924677">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="243" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1585582924677" />
+    <state width="1442" height="376" key="GridCell.Tab.1.center/0.23.1680.940@0.23.1680.940" timestamp="1585559682709" />
+    <state width="1638" height="243" key="GridCell.Tab.1.left" timestamp="1585582924676">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="243" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1585582924676" />
+    <state width="1442" height="376" key="GridCell.Tab.1.left/0.23.1680.940@0.23.1680.940" timestamp="1585559682708" />
+    <state width="1638" height="243" key="GridCell.Tab.1.right" timestamp="1585582924677">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="243" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1585582924677" />
+    <state width="1442" height="376" key="GridCell.Tab.1.right/0.23.1680.940@0.23.1680.940" timestamp="1585559682709" />
+    <state x="341" y="164" key="SettingsEditor" timestamp="1585513647365">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1585513647365" />
+    <state x="341" y="129" key="SettingsEditor/0.23.1680.940@0.23.1680.940" timestamp="1585506322098" />
+    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1585492036696">
+      <screen x="0" y="23" width="1680" height="940" />
+    </state>
+    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1680.940@0.23.1680.940" timestamp="1585492036696" />
+    <state x="495" y="171" width="845" height="708" key="find.popup" timestamp="1585583008991">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="495" y="171" width="845" height="708" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585583008991" />
+    <state x="505" y="248" key="run.anything.popup" timestamp="1585513563632">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="248" key="run.anything.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585513563632" />
+    <state x="505" y="230" width="670" height="676" key="search.everywhere.popup" timestamp="1585575991112">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="230" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1585575991112" />
+    <state x="505" y="229" key="search.everywhere.popup/0.23.1680.940@0.23.1680.940" timestamp="1585473077216" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ChessAutomator$com_ajitesh_chess_automator_AppKt.ic" NAME="com.ajitesh.chess.automator.AppKt Coverage Results" MODIFIED="1585559298956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
