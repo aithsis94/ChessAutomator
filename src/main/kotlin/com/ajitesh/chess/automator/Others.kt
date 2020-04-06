@@ -1,21 +1,48 @@
 package com.ajitesh.chess.automator
 
+import org.opencv.core.MatOfPoint
+import org.opencv.core.Point
+import java.awt.Rectangle
 import java.awt.image.BufferedImage
 
-data class DeviceUICaptureInfo(val isSuccess: Boolean, val folderPath: String? = null)
+data class DefaultChessConfigInfo(val workingFolderPath: String, val boundRect: Rectangle, val isLowerPlayerWhite : Boolean? = null, val defaultContours : List<ChessPieceContour>? = null)
 
-data class Margin(val left: Int, val top: Int, val right: Int, val bottom: Int)
-
-data class ChessPieceImage(val name : String, val image: BufferedImage)
-
-inline fun diff(first: Int, second: Int): Int {
-
-    val diff = first - second
-
-    return if (diff < 0)
-        -diff
-    else
-        diff
+enum class ChessPieceType(val notation : String) {
+    PAWN(""),
+    KNIGHT("N"),
+    BISHOP("B"),
+    ROOK("R"),
+    QUEEN("Q"),
+    KING("K")
 }
 
-inline fun minOf(first: Int, second: Int) = if (first <= second) first else second
+data class ChessPiece(val type: ChessPieceType, val isWhite: Boolean)
+
+data class ChessPieceContour(val piece: ChessPiece, val points: List<Point>)
+
+data class ChessPieceCoordinate(val piece: ChessPiece, val coordinate: Coordinate)
+
+data class Coordinate(val xPos: Int, val yPos: Int) {
+
+    init {
+        require(xPos in 0..7 && yPos in 0..7) { "Invalid coordinate($xPos, $yPos)" }
+    }
+}
+
+data class ContourGenerationParams(
+    val isWhite: Boolean,
+    val threshold: Double,
+    val maxValue: Double,
+    val thresholdType: Int,
+    val epsilonFactor: Double
+)
+
+data class MoveInfo(val latestMove : String?, val currFrame : List<ChessPieceCoordinate>)
+
+fun List<MatOfPoint>.getContourPoints(): List<Point> {
+
+    return this.fold(mutableListOf(), { acc, matOfPoint ->
+        acc.addAll(matOfPoint.toList())
+        acc
+    })
+}

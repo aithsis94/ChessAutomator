@@ -1,67 +1,107 @@
 package com.ajitesh.chess.automator
 
-import org.opencv.core.*
-import org.opencv.imgcodecs.Imgcodecs
-import org.opencv.imgproc.Imgproc
-
 
 fun main() {
 
-   /* val uiCaptureInfo = ChessMoveDetector.dumpDeviceUI("/Users/ajitesh/Desktop/")
-    val boundsRect = ChessMoveDetector.getChessBoardBoundsRect(uiCaptureInfo)
-    ChessMoveDetector.generateChessBordImage(uiCaptureInfo.folderPath!!, boundsRect)*/
+    val parentFolder = "/Users/ajitesh/Desktop/"
+    val suffix = "Working"
 
+    println("reading default configuration & position ...")
+    val defaultConfig = ChessBoardUtil.readDefaultPosConfigFromDevice(parentFolder, suffix)
+    println("Success, Monitoring...")
 
-    /*val margin = Margin(19, 12, 19, 12)
-    ChessMoveDetector.generateChessPieces("/Users/ajitesh/Desktop/Working/chess_board.png", "/Users/ajitesh/Desktop/ChessPieces/", margin, true)*/
+    val chessEngine: IChessEngine = StockFishEngine("/Users/ajitesh/Desktop/stockfish")
+    chessEngine.startGame()
 
+    var prevFrame = ChessBoardUtil.readPiecePositionsFromDevice(defaultConfig, 8.0f).toMutableList()
 
-    /*val prevTime = Date().time
-    ChessMoveDetector.printBoard("/Users/ajitesh/Desktop/Working/")
-    val currTime = Date().time
+    if (defaultConfig.isLowerPlayerWhite!!) {
+        println("You are white.")
+        ChessMovesUtil.performNextBestMove(defaultConfig, prevFrame, chessEngine, 15)
+        val myMove = chessEngine.getPrevMoves().last()
+        println("Bot - $myMove")
+    } else {
+        println("You are black.")
+        println("Press enter after opponent's move")
+        readLine()
+    }
 
-    val diff = (currTime - prevTime)/1000
+    while (true) {
 
-    println("Time taken = $diff secs")*/
+        Thread.sleep(300)
 
-//    val source = "/Users/ajitesh/Desktop/ChessPieces2/rook_black_1.png"
-//    val template = "/Users/ajitesh/Desktop/ChessPieces2/rook_black_2.png"
-//
-//    val sourceImg = ImageIO.read(File(source))
-//    val templateImg = ImageIO.read(File(template))
-//
-//    println(ChessMoveDetector.doesContainsTemplate(sourceImg, templateImg, 0.9f, 15))
+        println("Detecting opponent's move...")
 
-    val d = ChessMoveDetector.PLATFORM_TOOLS_FOLDER
-    findContours()
+        var opponentMoveInfo = try {
+            ChessBoardUtil.detectChessMoveFromDevice(defaultConfig, prevFrame, 8.0f)
+        } catch (e: Exception) {
+            null
+        }
+
+        if (opponentMoveInfo == null) {
+            println("No opponent move detected")
+            continue
+        }
+
+        println("Opponent - ${opponentMoveInfo.latestMove}")
+
+        val currFrame = opponentMoveInfo.currFrame.toMutableList()
+        val opponentsMove = opponentMoveInfo.latestMove
+
+        ChessMovesUtil.performNextBestMove(defaultConfig, currFrame, chessEngine, 20, opponentsMove)
+
+        val myMove = chessEngine.getPrevMoves().last()
+        println("Bot - $myMove")
+
+        prevFrame = currFrame
+    }
 }
 
-fun findContours() {
+/*
+fun drawContours() {
 
-    val chessBoardImg = Imgcodecs.imread("/Users/ajitesh/Desktop/Working/chess_board.png", Imgcodecs.IMREAD_GRAYSCALE)
+    ChessBoardUtil.getCellName(Coordinate(1, 1), true)
 
-    val threshold = Mat()
-    Imgproc.threshold(chessBoardImg, threshold, 240.0, 255.0, Imgproc.THRESH_BINARY)
-    chessBoardImg.release()
+    val path = "/Users/ajitesh/Desktop/Working/chess_bug.png"
+
+    val screenShotImg = Imgcodecs.imread(path, Imgcodecs.IMREAD_GRAYSCALE)
+
+    val blackWhite = Mat()
+    Imgproc.threshold(screenShotImg, blackWhite, 244.0, 255.0, Imgproc.THRESH_BINARY)
+    Imgcodecs.imwrite("/Users/ajitesh/Desktop/Working/black_highlighted.png", blackWhite)
+
 
     val contours = mutableListOf<MatOfPoint>()
-    Imgproc.findContours(threshold, contours, Mat(), Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE)
+    Imgproc.findContours(blackWhite, contours, Mat(), Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE)
 
-    for(contour in contours){
+    val toDrawContours = contours.map { contour ->
 
         val contour2f = MatOfPoint2f()
-        contour.convertTo(contour2f, CvType.CV_32FC2);
+        contour.convertTo(contour2f, CvType.CV_32FC2)
 
         val approxContour = MatOfPoint()
         val approxContour2f = MatOfPoint2f()
 
-        Imgproc.approxPolyDP(contour2f, approxContour2f, 0.03 * Imgproc.arcLength(contour2f, true),  true)
+        Imgproc.approxPolyDP(
+            contour2f,
+            approxContour2f,
+            0.07 * Imgproc.arcLength(contour2f, true),
+            true
+        )
+
         approxContour2f.convertTo(approxContour, CvType.CV_32S)
-
-
-        //Imgproc.drawContours(threshold, mutableListOf(approxContour), 0, Scalar(150.0, 150.0, 150.0), 2)
+        approxContour
     }
 
-    Imgcodecs.imwrite("/Users/ajitesh/Desktop/Working/threshold.png", threshold)
-    threshold.release()
+    val contourImg = Mat(blackWhite.rows(), blackWhite.cols(), CvType.CV_8U, Scalar.all(0.0))
+
+    toDrawContours.forEachIndexed {index, it ->
+        Imgproc.drawContours(contourImg, contours, index, Scalar.all(255.0), 1)
+    }
+
+    Imgcodecs.imwrite("/Users/ajitesh/Desktop/Working/black_contours.png", contourImg)
+    contourImg.release()
+    screenShotImg.release()
+    blackWhite.release()
 }
+*/
